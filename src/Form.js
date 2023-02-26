@@ -16,7 +16,7 @@ class Form extends Component {
             imdbRating: '',
             director: '',
             year: '',
-            dateAdded: ''
+            // dateAdded: ''
         };
 
         //set our initial state to state.
@@ -107,14 +107,14 @@ class Form extends Component {
                     value={year}
                     onChange={this.handleChange}
                     /><br/>    
-                <label htmlFor="dateAdded">Date Added :</label><br/>
+                {/* <label htmlFor="dateAdded">Date Added :</label><br/>
                 <input 
                     type="dateAdded" 
                     id="dateAdded" 
                     name="dateAdded"
                     value={dateAdded}
                     onChange={this.handleChange}
-                    />
+                    /> */}
                 <button type="submit">
                     Submit
                 </button>

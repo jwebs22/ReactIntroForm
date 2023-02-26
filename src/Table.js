@@ -13,7 +13,7 @@ import React, { Component } from "react";
                  <th>imdb Rating</th>
                  <th>Director</th>
                  <th>Year</th>
-                 <th>Date Added</th>
+                 {/* <th>Date Added</th> */}
                </tr>
              </thead>
      );
@@ -35,7 +35,7 @@ return (
     <td>{row.imdbRating}</td>
     <td>{row.director}</td>
     <td>{row.year}</td>
-    <td>{row.dateAdded}</td>
+    {/* <td>{row.dateAdded}</td> */}
     <td><button onClick={() => props.removeMovie(index)}> Delete</button></td>
     </tr>
 )
