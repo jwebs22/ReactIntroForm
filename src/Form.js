@@ -47,7 +47,6 @@ class Form extends Component {
         //clear inputs by setting form to inital state
         this.setState(this.initialState);
         this.initalState.dateAdded = newDate;
-
     }
 
     render() {

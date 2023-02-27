@@ -127,13 +127,14 @@ class App extends Component {
       }),
     })
   }
-  
+
   // Add the handle submit here, because the movies are in here 
   // Passing a movie to addMovie w/ spread operator to unpack movies array and adding a new movie
   addMovie = movie => {
     this.setState({ movies: [...this.state.movies, movie] })
   }
 
+  
   render() {
 
     //Pass in movies from state and removeMovie func so table can use it later on. 
