@@ -16,14 +16,13 @@ class Form extends Component {
             imdbRating: '',
             director: '',
             year: '',
-            // dateAdded: ''
+            dateAdded: new Date().toString()
         };
 
         //set our initial state to state.
         this.state = this.initialState;
     }
 
-    //name? or title?
     handleChange = event => {
         //get name, value out of target (element that changed)
         const { name, value } = event.target;
@@ -43,12 +42,12 @@ class Form extends Component {
 
         //clear inputs by setting form to inital state
         this.setState(this.initialState);
-    
+
     }
 
     render() {
         //hook in data from state 
-        const { title, actors, plot, genre, imdbRating, director, year, dateAdded } = this.state;
+        const { title, actors, plot, genre, imdbRating, director, year } = this.state;
         return (
             <form onSubmit={this.onFormSubmit}>
                 <label htmlFor="title">Title :</label><br/>
@@ -64,7 +63,7 @@ class Form extends Component {
                     type="text" 
                     id="actors" 
                     name="actors"
-                    value={actors} 
+                    value={actors}
                     onChange={this.handleChange}
                     /><br/>
                 <label htmlFor="plot">Plot :</label><br/>
@@ -106,15 +105,7 @@ class Form extends Component {
                     name="year"
                     value={year}
                     onChange={this.handleChange}
-                    /><br/>    
-                {/* <label htmlFor="dateAdded">Date Added :</label><br/>
-                <input 
-                    type="dateAdded" 
-                    id="dateAdded" 
-                    name="dateAdded"
-                    value={dateAdded}
-                    onChange={this.handleChange}
-                    /> */}
+                    />
                 <button type="submit">
                     Submit
                 </button>

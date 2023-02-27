@@ -3,8 +3,11 @@ import React, { Component } from 'react';
 import Table from './Table'
 import Form from './Form'
 
+let currentDate = new Date()
+
 class App extends Component {
   // set initial state of component 
+  
   state = {
     movies: [
       {
@@ -15,7 +18,7 @@ class App extends Component {
         imdbRating: 9.2,
         director: "Francis Ford Coppola",
         year: 1972,
-        dateAdded: new Date(),
+        dateAdded: currentDate.toString(),
       },
       {
         title: "The Shawshank Redemption",
@@ -25,7 +28,7 @@ class App extends Component {
         imdbRating: 9.3,
         director: "Frank Darabont",
         year: 1994,
-        dateAdded: new Date(),
+        dateAdded: currentDate.toString(),
       },
       {
         title: "The Dark Knight",
@@ -35,7 +38,7 @@ class App extends Component {
         imdbRating: 9.0,
         director: "Christopher Nolan",
         year: 2008,
-        dateAdded: new Date(),
+        dateAdded: currentDate.toString(),
       },
       {
         title: "Pulp Fiction",
@@ -45,7 +48,7 @@ class App extends Component {
         imdbRating: 8.9,
         director: "Quentin Tarantino",
         year: 1994,
-        dateAdded: new Date(),
+        dateAdded: currentDate.toString(),
       },
       {
         title: "The Lord of the Rings: The Return of the King",
@@ -55,7 +58,7 @@ class App extends Component {
         imdbRating: 8.9,
         director: "Peter Jackson",
         year: 2003,
-        dateAdded: new Date(),
+        dateAdded: currentDate.toString(),
       },
       {
         title: "Forrest Gump",
@@ -65,7 +68,7 @@ class App extends Component {
         imdbRating: 8.8,
         director: "Robert Zemeckis",
         year: 1994,
-        dateAdded: new Date(),
+        dateAdded: currentDate.toString(),
       },
       {
         title: "Inception",
@@ -75,7 +78,7 @@ class App extends Component {
         imdbRating: 8.7,
         director: "Christopher Nolan",
         year: 2010,
-        dateAdded: new Date(),
+        dateAdded: currentDate.toString(),
       },
       {
         title: "The Matrix",
@@ -85,7 +88,7 @@ class App extends Component {
         imdbRating: 8.7,
         director: "Lana Wachowski, Lilly Wachowski",
         year: 1999,
-        dateAdded: new Date(),
+        dateAdded: currentDate.toString(),
       },
       {
         title: "Schindler's List",
@@ -95,7 +98,7 @@ class App extends Component {
         imdbRating: 8.9,
         director: "Steven Spielberg",
         year: 1993,
-        dateAdded: new Date(),
+        dateAdded: currentDate.toString(),
       },
       {
         title: "Goodfellas",
@@ -105,7 +108,7 @@ class App extends Component {
         imdbRating: 8.7,
         director: "Martin Scorsese",
         year: 1990,
-        dateAdded: new Date(),
+        dateAdded: currentDate.toString(),
       },
     ]
   }
