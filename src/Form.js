@@ -16,7 +16,7 @@ class Form extends Component {
             imdbRating: '',
             director: '',
             year: '',
-            dateAdded: new Date().toString()
+            dateAdded: new Date().toString(),
         };
 
         //set our initial state to state.
@@ -36,12 +36,17 @@ class Form extends Component {
     onFormSubmit = (event) => {
         //standard code for onSubmits 
         event.preventDefault();
+
+        //add date
+        const newDate = new Date().toString()
+        this.setState({ dateAdded: newDate })
         
         //set the current state of our form to the handle submit
         this.props.addMovie(this.state);
 
         //clear inputs by setting form to inital state
         this.setState(this.initialState);
+        this.initalState.dateAdded = newDate;
 
     }
 
@@ -76,7 +81,7 @@ class Form extends Component {
                     /><br/>
                 <label htmlFor="genre">Genre :</label><br/>
                 <input 
-                    type="genre" 
+                    type="text" 
                     id="genre" 
                     name="genre"
                     value={genre}
@@ -84,7 +89,7 @@ class Form extends Component {
                     /><br/>
                 <label htmlFor="imdbRating">imdb Rating :</label><br/>
                 <input 
-                    type="imdbRating" 
+                    type="text" 
                     id="imdbRating" 
                     name="imdbRating"
                     value={imdbRating}
@@ -92,7 +97,7 @@ class Form extends Component {
                     /><br/>
                 <label htmlFor="director">Director :</label><br/>
                 <input 
-                    type="director" 
+                    type="text" 
                     id="director" 
                     name="director"
                     value={director}
@@ -100,7 +105,7 @@ class Form extends Component {
                     /><br/>
                 <label htmlFor="year">Year :</label><br/>
                 <input 
-                    type="year" 
+                    type="text" 
                     id="year" 
                     name="year"
                     value={year}

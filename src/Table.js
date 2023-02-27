@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
- 
 //Table Header
  const TableHeader = () => {
      return (
