@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Table from './Table'
 import Form from './Form'
+import Search from './Search'
 
 let currentDate = new Date()
 
@@ -134,12 +135,13 @@ class App extends Component {
     this.setState({ movies: [...this.state.movies, movie] })
   }
 
-  
+
   render() {
 
     //Pass in movies from state and removeMovie func so table can use it later on. 
     return (
       <div className="container">
+        <Search />
         <Table
           movieData={this.state.movies}
           removeMovie={this.removeMovie}

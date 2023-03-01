@@ -45,8 +45,10 @@ class Form extends Component {
         this.props.addMovie(this.state);
 
         //clear inputs by setting form to inital state
+        
         //if this is first, the form fields do not clear (prevent default not working)
-        this.initalState.dateAdded = newDate; 
+        //giving error "Uncaught TypeError: Cannot set properties of undefined (setting 'dateAdded')
+        this.initalState.dateAdded = new Date().toString(); 
         //if this is first, the time doesn't update, for the form will clear
         this.setState(this.initialState);
     }

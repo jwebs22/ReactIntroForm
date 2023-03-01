@@ -29,6 +29,7 @@ const rows = props.data.map((row, index) => {
 return (
     <tr key={index}>
     <td>{row.title}</td>
+    {/* Using .join on actors, get a 'not a function' error on submit */}
     <td>{row.actors}</td>
     <td>{row.plot}</td>
     <td>{row.genre}</td>
