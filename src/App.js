@@ -1,12 +1,11 @@
 import './App.css';
 import Table from './Table'
 import MovieForm from './MovieForm';
+import SearchBar from './SearchBar';
 import { useState } from 'react';
 
 function App() {
-
-
-
+	
   const moviesData = [
 		{
 			title: "The Godfather",
@@ -125,11 +124,37 @@ function App() {
     setMovies(filteredMovies)
   }
 
+  const resetSearch = () => {
+	setMovies(moviesData);
+  }
+
+  const filterMovies = (input, field) => {
+
+	// //show all films if there is no query 
+	// if (searchField.trim().length === 0) {
+	// 	setMovies(moviesData);
+	// 	return;
+	// }
+
+	 const moviesFiltered = movies.filter((movie) => {
+		   return movie[field].toLowerCase().includes(input.toLowerCase())
+	 })
+
+	 setMovies(moviesFiltered)
+  } 
+  
+  
+
   return (
  <div className="App">
+  <SearchBar	
+	filterMovies={filterMovies}
+	resetSearch={resetSearch}
+  />
   <Table 
      movies={movies}
      removeMovie={removeMovie}
+	
   />
   <MovieForm 
     addMovie={addMovie}

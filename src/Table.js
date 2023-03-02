@@ -3,8 +3,14 @@
  * 
  */
 
+
  import React from "react";
 
+ /*
+ create two simple function components to make
+ our table code more readable
+ */
+ 
  //TABLE HEADER SIMPLE COMPONENT
  const TableHeader = () => {
      return (
@@ -35,7 +41,7 @@
        return (
          <tr key={index}>
            <td>{row.title}</td>
-           <td>{row.actors}</td>
+           <td>{row.actors.join(" ")}</td>
            <td>{row.plot}</td>
            <td>{row.genre}</td>
            <td>{row.imdbRating}</td>
