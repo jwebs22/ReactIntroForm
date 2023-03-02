@@ -4,6 +4,8 @@ import MovieForm from './MovieForm';
 import SearchBar from './SearchBar';
 import { useState } from 'react';
 
+const DATA = 
+
 function App() {
 	
   const moviesData = [
