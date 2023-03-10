@@ -1,9 +1,14 @@
 
 import './App.css';
-import Table from './Table'
-import MovieForm from './MovieForm';
-import SearchBar from './SearchBar';
+import MovieForm from './components/MovieForm';
+import SearchBar from './components/SearchBar';
 import { useEffect, useState } from 'react';
+
+import { Outlet } from "react-router-dom";
+
+import NavBar from './components/NavBar';
+import MovieList from './pages/MovieList';
+
 
 
 const DATA_URL = "https://raw.githubusercontent.com/jwebs22/react-intro-form/main/data/movies.json"
@@ -64,10 +69,11 @@ function App() {
 
   return (
  <div className="App">
+  <NavBar />
   <SearchBar	
 	filterMovies={filterMovies}
   />
-  <Table 
+  <MovieList
      movies={movies || []}
      removeMovie={removeMovie}
 	
@@ -75,6 +81,7 @@ function App() {
   <MovieForm 
     addMovie={addMovie}
   />
+  <Outlet />
 </div>
   );
 }

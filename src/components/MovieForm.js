@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 
 function MovieForm(props) {
@@ -12,7 +12,7 @@ function MovieForm(props) {
    const [imdbRating,setImdbRating] = useState(0.0)
    const [director,setDirector] = useState("A director")
    const [year,setYear] = useState(0)
-   const [dateAdded, setDateAdded] = useState(new Date().toISOString())
+   const [, setDateAdded] = useState(new Date().toISOString())
 //    const [inputValues, setInputValues] = useState({
 //         title: "",
 //         actors: [],

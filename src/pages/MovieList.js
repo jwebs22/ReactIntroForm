@@ -1,18 +1,6 @@
-/**
- * Table React Component 
- * 
- */
+import React from "react";
 
-
- import React from "react";
-
- /*
- create two simple function components to make
- our table code more readable
- */
- 
- //TABLE HEADER SIMPLE COMPONENT
- const TableHeader = () => {
+const TableHeader = () => {
      return (
          <thead>
                <tr>
@@ -27,16 +15,11 @@
                </tr>
              </thead>
      );
- }
+}
  
- //TABLE BODY SIMPLE COMPONENT 
- const TableBody = (props) => {
+
+const TableBody = (props) => {
  
- 
-     //construct rows
-     // use map to iterate over each row and wrap it in
-     // a html table row  
-     //registered an on click listener to remove the character
      const rows = props.data.map((row, index) => {
        return (
          <tr key={index}>
@@ -52,11 +35,11 @@
          </tr>
        )
      })
-     //return rows wrapped in tbody
+     
      return <tbody>{rows}</tbody>
-   }
- // TABLE is our main Component
- const Table = (props) => {
+}
+ 
+const MovieList = (props) => {
 
     const { 
       movies,
@@ -72,6 +55,6 @@
         />
       </table>
     )
- }
- 
- export default Table
+}
+
+export default MovieList;
