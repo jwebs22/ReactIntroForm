@@ -9,8 +9,6 @@ import { Outlet } from "react-router-dom";
 import NavBar from './components/NavBar';
 import MovieList from './pages/MovieList';
 
-
-
 const DATA_URL = "https://raw.githubusercontent.com/jwebs22/react-intro-form/main/data/movies.json"
 
 

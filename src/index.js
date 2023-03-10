@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import HomePage from './pages/HomePage';
 import MovieList from './pages/MovieList';
+import MoviePage from './pages/MoviePage';
 import MovieForm from './components/MovieForm';
 import NavBar from './components/NavBar';
 import SearchBar from './components/SearchBar';
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
     {
       path: "/MovieList",
       element: <MovieList />
+    },
+    {
+      path: "/MoviePage",
+      element: <MoviePage />
     },
     {
       path: "/MovieForm",
